@@ -102,7 +102,7 @@ document.body.appendChild(factB); //adds button to the dom
 var factL = document.createElement("ol"); //add empty list
 document.body.appendChild(factL); 
 
-//
+
 var factList = function(e){
     //adds a new element to the list
     var newEle = document.createElement("li");
@@ -120,3 +120,25 @@ var factList = function(e){
 };
 
 factB.addEventListener("click", factList);
+
+//square
+//adding a new button for square
+var sqrB = document.createElement("button");
+var sqrT = document.createTextNode("Gimme the next square number!");
+sqrB.appendChild(sqrT); //adds text to the button
+document.body.appendChild(sqrB); //adds button to the dom
+var sqrL = document.createElement("ol"); //add empty list
+document.body.appendChild(sqrL); 
+
+
+var sqrList = function(e){
+    //adds a new element to the list
+    var newEle = document.createElement("li");
+    var sqrEles = sqrL.getElementsByTagName("li"); //a list of all the elements in the list
+    var numEle = sqrEles.length; //number of elements in the list
+    var text = document.createTextNode((numEle+1)*(numEle+1)); //square it (starting at 1)
+    newEle.appendChild(text); //adds the text to the element
+    sqrL.appendChild(newEle); //adds the element to the list
+};
+
+sqrB.addEventListener("click", sqrList);
