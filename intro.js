@@ -46,8 +46,7 @@ var remclicked = function(e){
 //adds the listeners for the elements currently in the list (before you press the buttons)
 var listEle = document.getElementsByTagName("li");
 var i = 0;
-while(i < listEle.length){ //add listeners
-    console.log(listEle[i]);
+while(i < listEle.length){
     listEle[i].addEventListener("mouseover", headset);
     listEle[i].addEventListener("mouseout", headreset);
     listEle[i].addEventListener("click", remclicked);
